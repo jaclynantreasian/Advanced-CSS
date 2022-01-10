@@ -9,13 +9,23 @@
         height: 7rem;
         width: 7rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
+        top: 6.5rem;
+        right: 6.5rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__background{
@@ -29,7 +39,15 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
-        
+        @include respond(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
        // transform: scale(80);
     }
 
